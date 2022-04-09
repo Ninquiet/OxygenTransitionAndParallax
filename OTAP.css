@@ -1,0 +1,32 @@
+/*  Transition to Left */
+
+.baseTransition.transitionLeft.notOnTransition .transitionChild{
+	transform : translateX(70vw) !important;
+    transition : transform 0.7s linear !important;
+}
+.baseTransition.transitionLeft.onTransition .transitionChild{
+    transition : transform 0.7s linear !important;
+	transform : translateX() !important;
+}
+
+/*  Transition to Right */
+
+.baseTransition.transitionRight.notOnTransition .transitionChild{
+	transform : translateX(-70vw) !important;
+    transition : transform 0.7s linear !important;
+}
+.baseTransition.transitionRight.onTransition .transitionChild{
+    transition : transform 0.7s linear !important;
+	transform : translateX() !important;
+}
+
+/*  Transition to Right FAST */
+
+.transitionRightFast.baseTransition.notOnTransition .transitionChild{
+	transform : translateX(-20vw) !important;
+    transition : transform 0.3s linear !important;
+}
+.transitionRightFast.baseTransition.onTransition .transitionChild{
+    transition : transform 0.3s linear !important;
+	transform : translateX() !important;
+}
