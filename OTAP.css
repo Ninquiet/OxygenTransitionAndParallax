@@ -30,3 +30,14 @@
     transition : transform 0.3s linear !important;
 	transform : translateX() !important;
 }
+
+/*  Transition to Left-Down In angle */
+
+.transitionToLeft-DownInAngle.baseTransition.notOnTransition .transitionChild{
+	transform : translateX() !important;
+    transition : transform 0.7s cubic-bezier(.43,.07,.47,.59) !important;
+}
+.transitionToLeft-DownInAngle.baseTransition.onTransition .transitionChild{
+    transition : transform 2s cubic-bezier(.43,.07,.47,.59) !important;
+    transform : translate(-90%,90%) !important;
+}

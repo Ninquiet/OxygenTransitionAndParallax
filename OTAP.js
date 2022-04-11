@@ -6,14 +6,9 @@ const notOnTransitionClassName ='notOnTransition'; // DONT CHANGE
 const parallaxBasicClassName = 'parallaxBasic'; // DONT CHANGE
 const parallaxBasicValue = '0.1';
 
+const parallaxMediumClassName = 'parallaxMedium'; // DONT CHANGE
+const parallaxMediumValue = '0.2';
 
-
-function toBottom()
-{
-	let objectiveLengt = document.body.scrollHeight-1100;
-    window.scrollTo(0, objectiveLengt);
-}
-window.onload=toBottom;
 
 function CallBackObserver(entries, observer)
 {
@@ -61,6 +56,17 @@ if (queryParallaxBasic != null) {
         element.classList.add('plax');
         element.setAttribute("data-paroller-type","foreground");
         element.setAttribute("data-paroller-factor",parallaxBasicValue);
+        element.setAttribute("data-paroller-direction","vertical");
+    });
+}
+
+// Add All ParallaxBasic values 
+let queryParallaxMedium = document.querySelectorAll("."+ parallaxMediumClassName);
+if (queryParallaxMedium != null) {
+    queryParallaxMedium.forEach(function(element) { 
+        element.classList.add('plax');
+        element.setAttribute("data-paroller-type","foreground");
+        element.setAttribute("data-paroller-factor",parallaxMediumValue);
         element.setAttribute("data-paroller-direction","vertical");
     });
 }
