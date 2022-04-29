@@ -73,4 +73,20 @@ if (queryParallaxMedium != null) {
 
 jQuery('.plax').paroller();
 
+async function AvionButton() {
+    console.log("Airplain Clicked broh");
+    jQuery("#avion-all").removeClass(onTransitionClassName);
+    jQuery("#avion-all").addClass("activate");
+
+    await new Promise(resolve => setTimeout(resolve, 1300)); 
+    jQuery("#toClouds").addClass("exit");
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    window.location.href = "http://mapakids.ninquiet.com/index.php/viajes-de-apolo/";
+    
+}
+
+window.onload  = function() {
+    window.location.href = "#Firstimage";
+}
 //
+

@@ -1,0 +1,53 @@
+.pendulumBotCenter.baseTransition.onTransition .transitionChild{
+    animation: penduloBotCenter 2s cubic-bezier(.32,1.88,.75,.33);
+}
+
+@keyframes penduloBotCenter {
+    0% {transform-origin: bottom center;  transform: rotate(0deg);}
+    30% {transform-origin: bottom center; transform: rotate(10deg); }
+    60% {transform-origin: bottom center; transform: rotate(-10deg)}
+    100% {transform-origin: center center;  transform: rotate(0deg) translate()}
+}
+
+/* From Left to Right - Sky girl*/
+.a-toRight.baseTransition.onTransition .transitionChild{
+    animation: a-toRight 1s linear;
+}
+@keyframes a-toRight {
+    0% {transform-origin: bottom center;  transform: rotate(30deg) translate(-30vw,0);}
+    100% {transform-origin: center center;  transform: rotate(0deg) translate()}
+}
+
+/* From Right to left - Camell */
+.a-toLeft-camell.baseTransition.onTransition .transitionChild{
+    animation: a-toLeft-camell 1.5s linear;
+}
+@keyframes a-toLeft-camell {
+    0% {transform-origin: bottom center;  transform: translate(30vw,2vw);}
+    20% {transform-origin: bottom center;  transform: translate(22vw,0vw);}
+    40% {transform-origin: bottom center;  transform: translate(15vw,2vw);}
+    60% {transform-origin: bottom center;  transform: translate(10vw,0vw);}
+    80% {transform-origin: bottom center;  transform: translate(5vw,2vw);}
+    100% {transform-origin: center center;  transform: translate()}
+}
+
+/* From Left to Right - Buceo */
+.a-toRight-buceo.baseTransition.onTransition .transitionChild{
+    animation: a-toRight-buceo 1.5s cubic-bezier(.16,.48,.26,.64);
+}
+@keyframes a-toRight-buceo {
+    0% {transform-origin: bottom center;  transform: translate(30vw,0vw);}
+    40% {transform-origin: bottom center;  transform: translate(15vw,8vw);}
+    80% {transform-origin: bottom center;  transform: translate(5vw,-3vw);}
+    100% {transform-origin: center center;  transform: translate()}
+}
+
+/* ROTATE small-rotate-infinite */
+.a-small-rotate-infinite{
+    animation: a-small-rotate-infinite 1.5s infinite cubic-bezier(.16,.48,.26,.64);
+}
+@keyframes a-small-rotate-infinite {
+    0% {transform-origin: bottom center;  transform: rotate();}
+    50% {transform-origin: bottom center;  transform: rotate(12deg);}
+    100% {transform-origin: center center;  transform: rotate();}
+}

@@ -41,3 +41,130 @@
     transition : transform 2s cubic-bezier(.43,.07,.47,.59) !important;
     transform : translate(-90%,90%) !important;
 }
+
+/*  Transition to Left-Down In angle */
+
+.transitionToLeft-DownInAngle.baseTransition.notOnTransition .transitionChild{
+	transform : translateX() !important;
+    transition : transform 0.7s cubic-bezier(.43,.07,.47,.59) !important;
+}
+.transitionToLeft-DownInAngle.baseTransition.onTransition .transitionChild{
+    transition : transform 2s cubic-bezier(.43,.07,.47,.59) !important;
+    transform : translate(-90%,90%) !important;
+}
+
+/* Rotate Pendulum top center  */
+
+.pendulumTopRight.baseTransition.notOnTransition .transitionChild{
+    transition : all 0.7s ease-in-out !important;
+    transform-origin: top right !important;
+    transform : rotate() !important;
+}
+.pendulumTopRight.baseTransition.onTransition .transitionChild{
+    transition : all 2s ease-in-out !important;
+    transform-origin: top right !important;
+    transform : rotate(20deg) !important;
+}
+
+/* Rotate Pendulum bot center  */
+
+.pendulumBotCenter.baseTransition.onTransition .transitionChild{
+    animation: penduloBotCenter 2s cubic-bezier(.32,1.88,.75,.33);
+}
+
+@keyframes penduloBotCenter {
+    0% {transform-origin: bottom center;  transform: rotate(0deg);}
+    30% {transform-origin: bottom center; transform: rotate(10deg); }
+    60% {transform-origin: bottom center; transform: rotate(-10deg)}
+    100% {transform-origin: center center;  transform: rotate(0deg) translate()}
+}
+
+/* Move to the left Airplain  */
+.leftAirplain.baseTransition.onTransition #avion-all{
+    animation: leftAirplain 1.3s cubic-bezier(.32,1.88,.75,.33);
+}
+
+@keyframes leftAirplain {
+    0% { transform: translate(76%);}
+    0% { transform: translate();}
+}
+
+/* Move the flag of the plain  */
+#bandera-avion-base.baseTransition.onTransition #bandera-avion{
+    animation: bandera-avion 1.3s linear infinite;
+}
+
+@keyframes bandera-avion {
+    0% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/bandera-avion-apolo.webp");}
+    35% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/bandera-avion-apolo.webp");}
+
+    40% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/avionsito-apolo-2.webp");}
+    65% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/avionsito-apolo-2.webp");}
+
+    70% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/bandera-avion-apolo-3.webp");}
+    95% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/bandera-avion-apolo-3.webp");}
+
+    100% { background-image: url("http://mapakids.ninquiet.com/wp-content/uploads/2022/04/bandera-avion-apolo.webp");}
+}
+
+/* Move to the left Airplain  */
+#avion-all.activate{
+    animation: leftAirplain2 8s cubic-bezier(.32,1.88,.75,.33)!important;
+}
+@keyframes leftAirplain2 {
+    0% { transform: translate();}
+    20% { transform: translate(40vw);}
+    25% { transform: translate(-100vw);}
+    40% { transform: translate(-100vw);}
+    100% { transform: translate(-100vw)}
+}
+
+/* vibrate the hole time  */
+#vibration{
+    animation: vibration 0.2s linear infinite !important;
+}
+@keyframes vibration {
+    50% { transform: translateY(-0.5vw);}
+    100% { transform: translate();}
+}
+
+#toClouds.entrace {
+    transition: all 2.5s linear ;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#toClouds.exit {
+    transition: all 1.5s linear !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/*
+.pendulumBotCenter.baseTransition.onTransition .transitionChild{
+    transition : all 2s ease-in-out !important;
+    transform-origin: bottom center !important;
+    animation: penuloDerecha 1s linear,
+    penduloCentro 1s linear 1s,
+    penduloIzquierda 1s linear 2s;
+}
+
+@keyframes penuloDerecha {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(30deg)}
+}
+
+@keyframes penduloIzquierda {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(-30deg)}
+}
+
+@keyframes penduloCentro { 
+    100% {transform: rotate(0deg)}
+}
+*/
+
+
+#BotonAvion:hover {
+    cursor: pointer;
+}
